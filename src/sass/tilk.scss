@@ -2,25 +2,25 @@
 @import 'base/colors';
 @import 'base/mixins';
 
-.laga {
+.tilk {
 
-h1.laga {
- background: rgba($color: red, $alpha: .8);
+h1.tilk {
+ background: rgba($color: $llgreen, $alpha: .8);
  color: white;
  font-size: 20px;
  padding-top: 5px;
  padding-bottom: 5px;
  padding-left: 15px;
  border-bottom: 1px solid rgba($color: gray, $alpha: .2);
-}// h1.laga 
+}// h1.tilk 
 
 ul {
 
-li {  
+li {
+ border-bottom: 1px solid rgba($color: $llgreen, $alpha: .2);
  padding-top: 10px;
  padding-bottom: 10px;
  padding-left: 15px;
- border-bottom: 1px solid rgba($color: red, $alpha: .2);
 
 .post {
 
@@ -29,13 +29,13 @@ h1.main {
  font-weight: 700;
 
 svg {
- color: rgba($color: red, $alpha: .6);
+ color: rgba($color: $llgreen, $alpha: .6);
  width: 40px;
  height: 40px;
  padding-left: 2px;
  padding-right: 2px;
  margin-bottom: -18px;
-}// svg
+}// svg 
 
 }// h1.main
 
@@ -49,4 +49,4 @@ p {
 
 }// ul
     
-}// .laga
+}// .tilk
