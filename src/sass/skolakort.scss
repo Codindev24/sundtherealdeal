@@ -5,7 +5,12 @@
 .skolakort {
 
 h1.skort {
-
+ background: rgba($color: $navpink, $alpha: .3);
+ font-size: 20px;
+ padding-top: 5px;
+ padding-bottom: 5px;
+ padding-left: 15px;
+ border-bottom: 1px solid rgba($color: gray, $alpha: .2);
 }// h1.skort
 
 .search {
@@ -34,18 +39,18 @@ ul {
 li {
 
 .skort {
- background: rgba($color: pink, $alpha: .2);
+
  @include oxygenl;
- font-size: 15px;
- padding-top: 2px;
- padding-bottom: 2px;
+ font-size: 16px;
+ padding-top: 3px;
+ padding-bottom: 3px;
  border-bottom: 1px solid rgba($color: gray, $alpha: .2);
 
 h1 {
 
 span {
- @include oxygenb;
- font-size: 15px;
+ font-size: 16px;
+ font-weight: 400;
  padding-top: 3px;
  padding-bottom: 4px;
  padding-left: 5px;
@@ -55,6 +60,7 @@ span {
 
 span.info {
  @include oxygenl;
+ margin-left: -10px;
 }// span.info
 
 }//h1
