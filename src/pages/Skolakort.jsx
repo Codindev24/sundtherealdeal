@@ -25,7 +25,7 @@ function Skolakort() {
          <div className="search flex justify-center">
 
          <input type="text" placeholder="Leita.." />
-         
+
          </div>{/* .search */}
 
         <ul className="">
@@ -34,10 +34,13 @@ function Skolakort() {
 
         <li key={skort.id}>
 
-       <div className="skort grid grid-cols-4 gap-2">
+       <div className="skort flex">
       
-      <h1 className="main"> { skort.nafn }</h1>
-      <p>{ skort.heimili }</p>
+      <h1><span>Nafn:</span> <span className="info">{ skort.nafn }</span></h1>
+      <h1><span>Heimili:</span> { skort.heimili }</h1>
+      <h1><span>Póstnr:</span> { skort.postnr }</h1>
+      <h1><span>Staður:</span> { skort.stadur }</h1>
+      <h1><span>Kennitala:</span> { skort.kennitala }</h1>
 
        </div>{/* .post */}
 
