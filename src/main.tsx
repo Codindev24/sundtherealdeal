@@ -2,6 +2,22 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import App from './App.tsx';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Skolakort from "./pages/Skolakort";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>Hello world!</div>,
+  },
+  {
+    path: "/skolakort",
+    element: <Skolakort />,
+  },
+]);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -61,5 +77,6 @@ createRoot(document.getElementById('root')!).render(
         <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet"></link>
       </Helmet>
     </HelmetProvider>
+    <RouterProvider router={router} />
   </StrictMode>
 );
