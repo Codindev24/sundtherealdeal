@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
+import Navbar from "./components/Navbar";
 import Laga from "./bits/Laga";
 import '././sass/app.scss';
 
@@ -10,6 +11,8 @@ function App() {
   return (
     <>
       <div className="app">
+
+       <Navbar />
         
       <Laga />
 

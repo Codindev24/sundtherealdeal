@@ -4,6 +4,38 @@
 
 .laga {
 
+h1.laga {
+ background: rgba($color: red, $alpha: .2);
+ font-size: 20px;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ padding-left: 15px;
+ border-bottom: 1px solid rgba($color: gray, $alpha: .2);
+}// h1.laga 
 
+ul {
+
+li {
+ border-bottom: 1px solid rgba($color: gray, $alpha: .2);
+ padding-top: 10px;
+ padding-bottom: 10px;
+ padding-left: 15px;
+
+.post {
+
+h1.main {
+ font-size: 18px;
+ font-weight: 700;
+}// h1.main
+
+p {
+ 
+}//p
+ 
+}// .post
+
+}// li
+
+}// ul
     
 }// .laga

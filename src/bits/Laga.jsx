@@ -20,7 +20,9 @@ function Laga() {
     <>
         <div className="laga">
 
-        <ul className="grid grid-cols-4">
+         <h1 className="laga">Þarfnast Lagfæringa</h1> 
+
+        <ul className="">
 
         {laga.map((laga) => (
 
@@ -28,7 +30,7 @@ function Laga() {
 
        <div className="post">
 
-      <h1>{ laga.title }</h1>
+      <h1 className="main">{ laga.title }</h1>
       <p>{ laga.desc }</p>
 
        </div>{/* .post */}
