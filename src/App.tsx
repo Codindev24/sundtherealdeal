@@ -13,10 +13,6 @@ function App() {
       <div className="app">
 
        <Navbar />
-        
-      <Laga />
-
-      <Tilk />
 
       </div>
        

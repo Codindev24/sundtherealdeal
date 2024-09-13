@@ -4,4 +4,43 @@
 
 .skolakort {
 
+h1.skort {
+
+}// h1.skort
+
+.search {
+
+input {
+ width: 100% !important;
+ font-size: 14px;
+ text-align: center;
+ padding-top: 10px;
+ padding-bottom: 10px;
+
+&::selected {
+ border: none !important;
+}
+
+}// input
+
+::placeholder {
+ font-size: 18px !important;
+}
+
+}// .search
+
+ul {
+
+li {
+
+.skort {
+ background: rgba($color: pink, $alpha: .2);
+
+
+}// .skort
+
+}// li
+
+}// ul
+
 }// .skolakort
