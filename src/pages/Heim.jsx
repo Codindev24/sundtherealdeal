@@ -8,10 +8,14 @@ function App() {
   return (
     <>
       <div className="app">
+
+      <div className="lagatilk flex justify-center">
         
       <Laga />
 
       <Tilk />
+
+      </div>
 
       </div>
        
