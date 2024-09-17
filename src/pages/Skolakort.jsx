@@ -54,6 +54,7 @@ function Skolakort() {
 
             <thead>
               <tr>
+                <th>Id</th>
                 <th>Nafn</th>
                 <th>Heimili</th>
                 <th>Póstnúmer</th>
@@ -72,7 +73,7 @@ function Skolakort() {
               {skort.map((skort) => (
 
                 <li key={skort.id}>
-
+                <th>{ skort.id }</th>
                 <th>{ skort.nafn }</th>
                 <td>{ skort.heimili }</td>
                 <td>{ skort.postnr }</td>
