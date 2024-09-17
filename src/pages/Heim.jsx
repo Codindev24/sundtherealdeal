@@ -10,7 +10,7 @@ function App() {
     <>
       <div className="app">
 
-      <Parallax blur={2} bgImage="https://res.cloudinary.com/itb-database/image/upload/s--bMF7aDwt--/c_fill,dpr_auto,f_auto,q_auto:eco,w_1470/v1/ServiceProviders/f898d328c7f7c459733d48cc2d83f1ad" bgImageAlt="the cat" strength={200}>
+      <Parallax blur={2} bgImage="https://d1s9j44aio5gjs.cloudfront.net/2020/09/Underwater-empty-pool.jpg" bgImageAlt="the cat" strength={200}>
         
       <h1 className="lagatilk flex justify-evenly">
 

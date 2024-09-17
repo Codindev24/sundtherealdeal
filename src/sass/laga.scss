@@ -6,9 +6,11 @@
  margin-right: 50px;
 
 h1.laga {
+
  color: white;
  font-size: 28px;
  @include oxygenb;
+ width: 100% !important;
  padding-top: 5px;
  padding-bottom: 5px;
  padding-left: 15px;
@@ -18,7 +20,6 @@ h1.laga {
 ul {
 
 li {
- background: rgba($color: $llorange, $alpha: .4);  
  padding-top: 10px;
  padding-bottom: 10px;
  padding-left: 15px;
