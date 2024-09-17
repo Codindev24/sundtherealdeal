@@ -3,24 +3,28 @@
 @import 'base/mixins';
 
 .laga {
+ margin-right: 50px;
 
 h1.laga {
- background: rgba($color: red, $alpha: .8);
  color: white;
- font-size: 20px;
+ font-size: 28px;
+ @include oxygenb;
  padding-top: 5px;
  padding-bottom: 5px;
  padding-left: 15px;
- border-bottom: 1px solid rgba($color: gray, $alpha: .2);
+ border-bottom: 6px solid rgba($color: red, $alpha: .3);
 }// h1.laga 
 
 ul {
 
-li {  
+li {
+ background: rgba($color: $llorange, $alpha: .4);  
  padding-top: 10px;
  padding-bottom: 10px;
  padding-left: 15px;
- border-bottom: 1px solid rgba($color: red, $alpha: .2);
+ padding-right: 15px;
+ border-bottom: 2px solid rgba($color: red, $alpha: .2);
+ margin-bottom: 5px;
 
 .post {
 

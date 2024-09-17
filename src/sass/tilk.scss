@@ -5,22 +5,22 @@
 .tilk {
 
 h1.tilk {
- background: rgba($color: $llgreen, $alpha: .8);
  color: white;
- font-size: 20px;
+ font-size: 28px;
+ @include oxygenb;
  padding-top: 5px;
  padding-bottom: 5px;
  padding-left: 15px;
- border-bottom: 1px solid rgba($color: gray, $alpha: .2);
+ border-bottom: 6px solid rgba($color: $llgreen, $alpha: .7);
 }// h1.tilk 
 
 ul {
 
 li {
- border-bottom: 1px solid rgba($color: $llgreen, $alpha: .2);
  padding-top: 10px;
  padding-bottom: 10px;
  padding-left: 15px;
+ border-bottom: 2px solid rgba($color: $llgreen, $alpha: .2);
 
 .post {
 
