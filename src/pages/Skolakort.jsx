@@ -28,27 +28,6 @@ function Skolakort() {
 
          </div>{/* .search */}
 
-        <ul className="">
-
-        {skort.map((skort) => (
-
-        <li key={skort.id}>
-
-       <div className="skort flex">
-      
-      <h1><span>Nafn:</span> <span className="info">{ skort.nafn }</span></h1>
-      <h1><span>Heimili:</span> <span className="info">{ skort.heimili }</span></h1>
-      <h1><span>Póstnr:</span> <span className="info">{ skort.postnr }</span></h1>
-      <h1><span>Staður:</span> <span className="info">{ skort.stadur }</span></h1>
-      <h1><span>Kennitala:</span> <span className="info">{ skort.kennitala }</span></h1>
-
-       </div>{/* .post */}
-
-        </li>
-
-        ))}
-        </ul> 
-
         <div className="overflow-x-auto">
           <table className="table table-xs">
 
@@ -60,37 +39,37 @@ function Skolakort() {
                 <th>Póstnúmer</th>
                 <th>Staður</th>
                 <th>Kennitala</th>
+                <th>Útgáfudagur</th>
                 <th>Gildir Til</th>
               </tr>
             </thead>
 
             <tbody>
 
-              <tr>
 
-              <ul className="">
 
               {skort.map((skort) => (
 
-                <li key={skort.id}>
+                <tr key={skort.id}>
+                
                 <th>{ skort.id }</th>
-                <th>{ skort.nafn }</th>
+                <td>{ skort.nafn }</td>
                 <td>{ skort.heimili }</td>
                 <td>{ skort.postnr }</td>
                 <td>{ skort.stadur }</td>
                 <td>{ skort.kennitala }</td>
+                <td>{ skort.created_at }</td>
                 <td>{ skort.gildirtil }</td>
 
-              </li>
+               </tr>
 
               ))}
-              </ul> 
 
-              </tr>
 
             </tbody>
 
           </table>
+
           
         </div>   
 
