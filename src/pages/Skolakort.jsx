@@ -6,6 +6,12 @@ const supabase = createClient("https://hdqsavcxdnrqtzqpxofj.supabase.co", "eyJhb
 
 function Skolakort() {
   const [skort, setSkorts] = useState([]);
+  const [searchItem, setSearchItem] = useState('')
+
+  const handleInputChange = (e) => { 
+    const searchTerm = e.target.value;
+    setSearchItem(searchTerm)
+  }
 
   useEffect(() => {
     getSkorts();
@@ -20,11 +26,13 @@ function Skolakort() {
     <>
         <div className="skolakort">
 
-         <h1 className="skort">Skólakort</h1> 
+         <h1 className="skort flex justify-center">Skólakort</h1> 
 
          <div className="search flex justify-center">
 
          <input type="text" placeholder="Leita.." />
+
+         <input type="text" value={searchItem} onChange={handleInputChange} placeholder='Type to search' />
 
          </div>{/* .search */}
 
@@ -46,7 +54,7 @@ function Skolakort() {
 
             <tbody>
 
-
+            {skort.map(user => <li key={skort.id}>{skort.nafn}</li>)}
 
               {skort.map((skort) => (
 
