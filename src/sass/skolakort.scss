@@ -4,6 +4,81 @@
 
 .skolakort {
 
+div {
+
+table.table {
+
+thead {
+
+tr {
+font-size: 14px;
+padding-top: 5px; 
+padding-bottom: 5px; 
+border-top: 1px solid rgba($color: gray, $alpha: .1);
+
+th {
+ padding-left: 15px;
+
+&.nafn {
+ background: rgba($color: gray, $alpha: .2);
+ color: $dark;
+ font-size: 14px;
+ font-weight: 600;
+ border-right: 1px solid rgba($color: gray, $alpha: .2);
+}// &.nafn
+
+&.kt {
+ background: rgba($color: gray, $alpha: .2);
+ color: $dark;
+ font-size: 14px;
+ font-weight: 600;
+ border-right: 1px solid rgba($color: gray, $alpha: .2);
+}// &.kt
+
+}// th
+
+}// tr
+
+}// thead
+
+tbody {
+
+tr {
+
+th {
+ padding-left: 15px;
+}// th
+
+td {
+ font-size: 14px;
+ padding-left: 15px;
+
+&.nafn {
+ background: rgba($color: gray, $alpha: .1);
+ color: $dark;
+ font-size: 14px;
+ font-weight: 600;
+ border-right: 1px solid rgba($color: gray, $alpha: .2);
+}// &.nafn
+
+&.kt {
+ background: rgba($color: gray, $alpha: .1);
+ color: $dark;
+ font-size: 14px;
+ font-weight: 600;
+ border-right: 1px solid rgba($color: gray, $alpha: .2);
+}// &.kt
+
+}// td
+
+}// tr
+
+}// tbody
+
+}// table.table
+
+}// div
+
 h1.skort {
  background: rgba($color: $navpink, $alpha: .3);
  font-size: 20px;

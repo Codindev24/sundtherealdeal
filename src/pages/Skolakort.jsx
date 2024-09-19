@@ -26,7 +26,7 @@ function Skolakort() {
     <>
         <div className="skolakort">
 
-         <h1 className="skort flex justify-center">Skólakort</h1> 
+         {/* <h1 className="skort flex justify-center">Skólakort</h1>  */}
 
          <div className="search flex justify-center">
 
@@ -42,11 +42,11 @@ function Skolakort() {
             <thead>
               <tr>
                 <th>Id</th>
-                <th>Nafn</th>
+                <th className="nafn">Nafn</th>
                 <th>Heimili</th>
                 <th>Póstnúmer</th>
                 <th>Staður</th>
-                <th>Kennitala</th>
+                <th className="kt">Kennitala</th>
                 <th>Útgáfudagur</th>
                 <th>Gildir Til</th>
               </tr>
@@ -54,18 +54,16 @@ function Skolakort() {
 
             <tbody>
 
-            {skort.map(user => <li key={skort.id}>{skort.nafn}</li>)}
-
               {skort.map((skort) => (
 
                 <tr key={skort.id}>
                 
                 <th>{ skort.id }</th>
-                <td>{ skort.nafn }</td>
+                <td className="nafn">{ skort.nafn }</td>
                 <td>{ skort.heimili }</td>
                 <td>{ skort.postnr }</td>
                 <td>{ skort.stadur }</td>
-                <td>{ skort.kennitala }</td>
+                <td className="kt">{ skort.kennitala }</td>
                 <td>{ skort.created_at }</td>
                 <td>{ skort.gildirtil }</td>
 
