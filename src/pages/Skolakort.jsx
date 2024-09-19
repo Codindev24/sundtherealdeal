@@ -30,7 +30,6 @@ function Skolakort() {
 
          <div className="search flex justify-center">
 
-         <input type="text" placeholder="Leita.." />
 
          <input type="text" value={searchItem} onChange={handleInputChange} placeholder='Type to search' />
 
