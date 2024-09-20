@@ -63,7 +63,7 @@ function Skolakort() {
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/newskort">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"

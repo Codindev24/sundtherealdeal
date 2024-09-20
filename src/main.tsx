@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Heim from "./pages/Heim";
 import Skolakort from "./pages/Skolakort";
+import NewSkort from "./pages/NewSkort";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/skolakort",
     element: <Skolakort />,
+  },
+  {
+    path: "/newskort",
+    element: <NewSkort />,
   },
 ]);
 

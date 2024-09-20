@@ -7,6 +7,7 @@
 .newskortbar {
 
 .breadcrumbs {
+ border-top: 1px solid rgba($color: gray, $alpha: .1);
 
 ul {
 
@@ -39,8 +40,8 @@ svg {
 }// .newskortbar
 
 .search {
- margin-top: 10px;
- margin-bottom: 20px;
+ margin-top: 2px;
+ margin-bottom: 12px;
 
 input {
  background: rgba($color: gray, $alpha: .1);
