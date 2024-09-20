@@ -4,7 +4,64 @@
 
 .newskort {
 
+.newskortbar {
+
+.breadcrumbs {
+ border-top: 1px solid rgba($color: gray, $alpha: .1);
+
+ul {
+
+li {
+
+span {
+
+svg {
+ color: $skag !important;
+ margin-right: 5px;
+}// svg
+
+}// span
+
+a {
+
+svg {
+ color: $skag !important;
+ margin-right: 2px;
+}// svg
+
+}// a
+
+}// li
+
+}// ul
+
+}// .breadcrumbs
+
+}// .newskortbar
+
 .newpost {
+
+ul {
+
+li {
+
+ul {
+
+li {
+float: left;
+
+input {
+ width: 100% !important;
+ margin-bottom: 5px;
+}// input
+
+}// li 
+
+}// ul
+
+}// li
+
+}// ul
 
 input {
  margin-bottom: 5px;
