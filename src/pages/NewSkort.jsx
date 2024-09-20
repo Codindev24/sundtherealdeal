@@ -10,28 +10,28 @@ import '../sass/newskort.scss';
 const supabase = createClient("https://hdqsavcxdnrqtzqpxofj.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhkcXNhdmN4ZG5ycXR6cXB4b2ZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY2MzIxMTMsImV4cCI6MjAzMjIwODExM30.w_bEXaTKIARv-k9mEYx9y2MZqvtoiIsvv4iI6rXGAo8");
 
 function Skolakort({ nafn, heimili, postnr, stadur, kt }) {
-  const [skort, setSkorts] = useState([]);
+  const [posts, setPosts] = useState([]);
 
-  async function createSkort() {
+  async function createPost() {
     await supabase
     .from ('skort')
     .insert([
         { nafn, heimili, postnr, stadur, kt }
     ])
     .single()
-    setSkorts({ nafn: "", heimili: "", postnr: "", stadur: "", kt: "" })
-    fetchSkorts()
+    setPosts({ nafn: "", heimili: "", postnr: "", stadur: "", kt: "" })
+    fetcPosts()
   }
 
   useEffect(() => {
-   fetchSkorts();
+   fetchPosts();
   }, []);
 
-  async function fetchSkorts() {
+  async function fetcPosts() {
     const { data } = await supabase
     .from("skort")
     .select()
-    setSkorts(data)
+    setPosts(data)
 
   }
 
@@ -106,36 +106,36 @@ function Skolakort({ nafn, heimili, postnr, stadur, kt }) {
        <li><PersonAddAlt1Icon /></li>
        <li><input type="text" placeholder="Nafn.." value={nafn}
         className="input input-bordered w-full max-w-xs" 
-        onChange={e => setSkorts({ ...skort, nafn: e.target.value })} /></li>
+        onChange={e => setPosts({ ...post, nafn: e.target.value })} /></li>
        </ul>
        </li>
 
         <li>
         <input type="text" placeholder="Heimili.." value={heimili}
         className="input input-bordered w-full max-w-xs"  
-        onChange={e => setSkorts({ ...skort, heimili: e.target.value })} />
+        onChange={e => setPosts({ ...post, heimili: e.target.value })} />
         </li>
 
         <li>
         <input type="text" placeholder="Póstnúmer.." value={postnr}
         className="input input-bordered w-full max-w-xs"  
-        onChange={e => setSkorts({ ...skort, postnr: e.target.value })} />
+        onChange={e => setPosts({ ...post, postnr: e.target.value })} />
         </li>
 
         <li>
         <input type="text" placeholder="Staður.." value={stadur}
         className="input input-bordered w-full max-w-xs"  
-        onChange={e => setSkorts({ ...skort, stadur: e.target.value })} />
+        onChange={e => setPosts({ ...post, stadur: e.target.value })} />
         </li>
 
         <li>
         <input type="text" placeholder="Kennitala.." value={kt}
         className="input input-bordered w-full max-w-xs"  
-        onChange={e => setSkorts({ ...skort, kt: e.target.value })} />
+        onChange={e => setPosts({ ...post, kt: e.target.value })} />
         </li>
 
         <li>
-          <button onClick={createSkort}>Vista</button>
+          <button onClick={createPost}>Vista</button>
         </li>
 
         </ul>
