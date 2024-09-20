@@ -4,6 +4,60 @@
 
 .skolakort {
 
+.newskortbar {
+
+.breadcrumbs {
+
+ul {
+
+li {
+
+span {
+
+svg {
+ color: $skag !important;
+ margin-right: 5px;
+}// svg
+
+}// span
+
+a {
+
+svg {
+ color: $skag !important;
+ margin-right: 2px;
+}// svg
+
+}// a
+
+}// li
+
+}// ul
+
+}// .breadcrumbs
+
+}// .newskortbar
+
+.search {
+ margin-top: 10px;
+ margin-bottom: 20px;
+
+input {
+ background: rgba($color: gray, $alpha: .1);
+ color: $dark !important;
+ font-size: 14px;
+ text-align: center;
+ min-width: 100% !important;
+ outline: none;
+ padding: .5rem 1rem;
+ margin-top: -2px;
+ border: 1px solid rgba($color: gray, $alpha: .1) !important;
+ text-shadow: none !important;
+
+}// input
+
+}// .search
+    
 div {
 
 table.table {
