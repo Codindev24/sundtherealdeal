@@ -45,6 +45,19 @@ ul {
 
 li {
 
+button {
+ background: $skag;
+ color: white;
+ width: 100%;
+ padding-top: 5px;
+ padding-bottom: 5px;
+
+&:hover {
+ background: $llgreen;
+}// &:hover
+
+}// button
+
 ul {
 
 li {
