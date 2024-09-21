@@ -10,6 +10,8 @@ import Heim from "./pages/Heim";
 import Skolakort from "./pages/Skolakort";
 import NewSkort from "./pages/NewSkort";
 
+import { ChakraProvider } from '@chakra-ui/react'
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,7 +30,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
       <HelmetProvider>
+      <ChakraProvider>
     <App />
+    </ChakraProvider>
     <Helmet>
         <title>Blog</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
