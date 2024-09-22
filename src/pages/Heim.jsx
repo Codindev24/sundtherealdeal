@@ -4,11 +4,11 @@ import { Parallax } from 'react-parallax';
 import '../sass/heim.scss';
 
 
-function App() {
+function Heim() {
 
   return (
     <>
-      <div className="app">
+      <div className="Heim">
 
       <Parallax blur={2} bgImage="https://d1s9j44aio5gjs.cloudfront.net/2020/09/Underwater-empty-pool.jpg" bgImageAlt="the cat" strength={200}>
         
@@ -83,4 +83,4 @@ function App() {
   );
 }
 
-export default App;
+export default Heim;

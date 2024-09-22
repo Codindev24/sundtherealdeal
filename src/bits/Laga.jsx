@@ -13,7 +13,8 @@ function Laga() {
   }, []);
 
   async function getLagas() {
-    const { data } = await supabase.from("laga").select();
+    const { data } = await supabase.from("laga")
+    .select();
     setLagas(data);
   }
 
