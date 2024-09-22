@@ -6,7 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Heim from "./pages/Heim";
+import Navbar from "./components/Navbar";
 import Skolakort from "./pages/Skolakort";
 import NewSkort from "./pages/NewSkort";
 
@@ -15,7 +15,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Heim/>,
+    element: <App/>,
   },
   {
     path: "/skolakort",
@@ -30,9 +30,12 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
       <HelmetProvider>
+
       <ChakraProvider>
-    <App />
+       <Navbar/>
+      <App />
     </ChakraProvider>
+
     <Helmet>
         <title>Blog</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />

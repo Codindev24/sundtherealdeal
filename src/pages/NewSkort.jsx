@@ -1,40 +1,34 @@
 import { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
+import { Button, HStack, Input, useToast } from '@chakra-ui/react';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import DeleteSkort from "./DeleteSkort";
 import AddHomeIcon from '@mui/icons-material/AddHome';
 import PlaceIcon from '@mui/icons-material/Place';
 import SafetyDividerIcon from '@mui/icons-material/SafetyDivider';
-
 import '../sass/newskort.scss';
 
 const supabase = createClient("https://hdqsavcxdnrqtzqpxofj.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhkcXNhdmN4ZG5ycXR6cXB4b2ZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTY2MzIxMTMsImV4cCI6MjAzMjIwODExM30.w_bEXaTKIARv-k9mEYx9y2MZqvtoiIsvv4iI6rXGAo8");
 
 function NewSkort() {
   const [skort, setSkorts] = useState([]);
-
-  const { nafn, heimili, postnr, stadur, kt } = skort
-
-  async function fetchData() {
-   const { data: skort, error } = await supabase
-  .from('skort')
-  .select('*')
-  setSkorts(skort);
-  console.log(skort);
-  }
-
-  useEffect(() => {
-   fetchData();
-  }, []);
+  const [nafn, setNafn] = useState('');
+  const [heimili, setHeimili] = useState('');
+  const [postnr, setPostnr] = useState('');
+  const [stadur, setStadur] = useState('');
+  const [kt, setKt] = useState('');
 
 
-  async function createSkort() {
-    const { data, error } = await supabase
-    .from('skort')
-    .insert([
-      { nafn: skort.nafn, heimili: skort.heimili, postnr: skort.postnr, stadur: skort.stadur, kt: skort.kt },
-    ])
-    .select()
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    const { data, error } = await supabase.from('skort').insert([{ nafn, heimili, postnr, stadur, kt }]);
+    setNafn('');
+    setHeimili('');
+    setPostnr('');
+    setStadur('');
+    setKt('');
+
   }
   
 
@@ -101,55 +95,34 @@ function NewSkort() {
 
         <div className="newpost flex justify-center">
 
-          <ul>
-
-       <li>
-       <ul className="iconinput">
-       <li><PersonAddAlt1Icon /></li>
-       <li><input type="text" placeholder="Nafn.." value={nafn}
+        <form onSubmit={handleSubmit}>
+      <PersonAddAlt1Icon />
+       <input type="text" placeholder="Nafn.." value={nafn}
         className="input input-bordered w-full max-w-xs" 
-        onChange={e => setSkorts({ ...skort, nafn: e.target.value })} /></li>
-       </ul>
-       </li>
+        onChange={e => setNafn(e.target.value)} />
 
-        <li>
         <input type="text" placeholder="Heimili.." value={heimili}
         className="input input-bordered w-full max-w-xs"  
-        onChange={e => setSkorts({ ...skort, heimili: e.target.value })} />
-        </li>
+        onChange={e => setHeimili(e.target.value)} />
 
-        <li>
         <input type="text" placeholder="Póstnúmer.." value={postnr}
         className="input input-bordered w-full max-w-xs"  
-        onChange={e => setSkorts({ ...skort, postnr: e.target.value })} />
-        </li>
-
-        <li>
+        onChange={e => setPostnr(e.target.value)} />
+  
         <input type="text" placeholder="Staður.." value={stadur}
         className="input input-bordered w-full max-w-xs"  
-        onChange={e => setSkorts({ ...skort, stadur: e.target.value })} />
-        </li>
+        onChange={e => setStadur(e.target.value)} />
 
-        <li>
         <input type="text" placeholder="Kennitala.." value={kt}
         className="input input-bordered w-full max-w-xs"  
-        onChange={e => setSkorts({ ...skort, kt: e.target.value })} />
-        </li>
+        onChange={e => setKt(e.target.value)} />
 
-        <li>
-          <button onClick={createSkort}>Vista</button>
-        </li>
+          <button>Vista</button>
+      </form>
 
-        </ul>
         
         </div>{ /*.newpost */ }
 
-        {skort.map((skort) => (
-          <div key={skort.id}>
-            <span>{ skort.nafn }</span>
-            <DeleteSkort id={skort.id} />
-          </div>
-        ))}
 
       </div>
        
