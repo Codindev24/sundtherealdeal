@@ -18,7 +18,8 @@ function Skolakort() {
   }, []);
 
   async function getSkorts() {
-    const { data } = await supabase.from("skort").select();
+    const { data } = await supabase.from("skort")
+    .select();
     setSkorts(data);
   }
 

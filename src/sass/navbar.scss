@@ -8,9 +8,32 @@
 
 }// .left
 
-.middle {
+.sauda {
 
-}// .middle
+.matarpontun {
+
+.pontun {
+
+.select {
+ margin-right: 8px;
+
+option {
+ border-bottom: 1px solid gray !important;
+
+&.strakar {
+ background: rgba($color: gray, $alpha: .7);
+ color: white;
+}// &.strakar
+
+}// option
+
+}// .select
+
+}// .pontun
+
+}// .matarpontun
+
+}// .sauda
 
 .right {
 

@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Heim from "./pages/Heim";
 import Skolakort from "./pages/Skolakort";
 import NewSkort from "./pages/NewSkort";
 
@@ -15,7 +16,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <Heim/>,
   },
   {
     path: "/skolakort",

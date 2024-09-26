@@ -14,7 +14,7 @@ function Laga() {
 
   async function getLagas() {
     const { data } = await supabase.from("laga")
-    .select();
+    .select('*')
     setLagas(data);
   }
 

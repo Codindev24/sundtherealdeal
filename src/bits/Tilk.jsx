@@ -9,11 +9,12 @@ function Tilk() {
   const [tilk, setTilks] = useState([]);
 
   useEffect(() => {
-    geTilks();
+    getTilks();
   }, []);
 
-  async function geTilks() {
-    const { data } = await supabase.from("tilk").select();
+  async function getTilks() {
+    const { data } = await supabase.from("tilk")
+    .select();
     setTilks(data);
   }
 
