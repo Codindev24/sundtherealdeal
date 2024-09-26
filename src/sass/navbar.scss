@@ -9,10 +9,31 @@
 }// .left
 
 .sauda {
-
+ background: rgba($color: gray, $alpha: .1);
+ padding-top: 20px;
+ padding-bottom: 10px;
+ padding-left: 30px;
+ padding-right: 30px;
+ margin-top: -10px;
+ margin-bottom: -10px;
+ border-left: 3px solid rgba($color: gray, $alpha: .2);
+ border-right: 1px solid rgba($color: gray, $alpha: .2);
 .matarpontun {
 
 .pontun {
+
+form { 
+
+button.matarpontun {
+ background: $dark;
+ margin-right: 10px;
+
+&:hover {
+ background: $dark;
+ color: white;
+}// &:hover 
+
+}// button.matarpontun
 
 .select {
  margin-right: 8px;
@@ -28,6 +49,41 @@ option {
 }// option
 
 }// .select
+
+button {
+color: white;
+
+&:hover {
+ background: $llgreen;
+ color: $dark;
+ border: none !important;
+}// &:hover
+
+}// button
+
+}// form
+
+.matarpost {
+ background: rgba($color: gray, $alpha: .4);
+ margin-top: 5px;
+
+.dags {
+ padding-left: 15px;
+}// .dags
+
+.stadur {
+ padding-left: 15px;
+}// .stadur
+
+.verd {
+ padding-left: 15px;
+}// .verd
+
+.starfsmadur {
+ padding-left: 15px;
+}// .starfsmadur
+
+}// .matarpost
 
 }// .pontun
 
