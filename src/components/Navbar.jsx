@@ -76,15 +76,15 @@ function Navbar() {
           </div>{/* .dags */}  
 
           <div className="stadur">
-           ic Sauðá
+           ic Hard wok
           </div>{/* .stadur */}
           
           <div className="verd">
-           ic 2.290kr
+           
           </div>{/* .verd */}      
 
           <div className="starfsmadur">
-           is Óðinn
+           is Ólafur
           </div>{/* .starfsmadur */}
 
           </div>{/* .matarpost */}
